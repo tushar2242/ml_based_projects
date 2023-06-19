@@ -1,0 +1,180 @@
+
+Reinforcement learning is an area of Machine Learning. It is about taking suitable action to maximize reward in a particular situation. It is employed by various software and machines to find the best possible behavior or path it should take in a specific situation. Reinforcement learning differs from supervised learning in a way that in supervised learning the training data has the answer key with it so the model is trained with the correct answer itself whereas in reinforcement learning, there is no answer but the reinforcement agent decides what to do to perform the given task. In the absence of a training dataset, it is bound to learn from its experience. 
+
+Reinforcement Learning (RL) is the science of decision making. It is about learning the optimal behavior in an environment to obtain maximum reward. In RL, the data is accumulated from machine learning systems that use a trial-and-error method. Data is not part of the input that we would find in supervised or unsupervised machine learning.
+
+Reinforcement learning uses algorithms that learn from outcomes and decide which action to take next. After each action, the algorithm receives feedback that helps it determine whether the choice it made was correct, neutral or incorrect. It is a good technique to use for automated systems that have to make a lot of small decisions without human guidance.
+
+Reinforcement learning is an autonomous, self-teaching system that essentially learns by trial and error. It performs actions with the aim of maximizing rewards, or in other words, it is learning by doing in order to achieve the best outcomes.
+
+Example: 
+
+The problem is as follows: We have an agent and a reward, with many hurdles in between. The agent is supposed to find the best possible path to reach the reward. The following problem explains the problem more easily.  
+
+
+
+The above image shows the robot, diamond, and fire. The goal of the robot is to get the reward that is the diamond and avoid the hurdles that are fired. The robot learns by trying all the possible paths and then choosing the path which gives him the reward with the least hurdles. Each right step will give the robot a reward and each wrong step will subtract the reward of the robot. The total reward will be calculated when it reaches the final reward that is the diamond. 
+Main points in Reinforcement learning – 
+ 
+
+Input: The input should be an initial state from which the model will start
+Output: There are many possible outputs as there are a variety of solutions to a particular problem
+Training: The training is based upon the input, The model will return a state and the user will decide to reward or punish the model based on its output.
+The model keeps continues to learn.
+The best solution is decided based on the maximum reward.
+ 
+Difference between Reinforcement learning and Supervised learning: 
+
+Reinforcement learning	Supervised learning
+Reinforcement learning is all about making decisions sequentially. In simple words, we can say that the output depends on the state of the current input and the next input depends on the output of the previous input	In Supervised learning, the decision is made on the initial input or the input given at the start
+In Reinforcement learning decision is dependent, So we give labels to sequences of dependent decisions	In supervised learning the decisions are independent of each other so labels are given to each decision.
+Example: Chess game,text summarization	Example: Object recognition,spam detetction
+Types of Reinforcement: 
+
+There are two types of Reinforcement:  
+
+Positive: Positive Reinforcement is defined as when an event, occurs due to a particular behavior, increases the strength and the frequency of the behavior. In other words, it has a positive effect on behavior. 
+Advantages of reinforcement learning are: 
+
+Maximizes Performance
+Sustain Change for a long period of time
+Too much Reinforcement can lead to an overload of states which can diminish the results
+Negative: Negative Reinforcement is defined as strengthening of behavior because a negative condition is stopped or avoided. 
+Advantages of reinforcement learning: 
+Increases Behavior
+Provide defiance to a minimum standard of performance
+It Only provides enough to meet up the minimum behavior
+Elements of Reinforcement Learning
+  Reinforcement learning elements are as follows:
+
+Policy
+Reward function
+Value function
+Model of the environment
+Policy: Policy defines the learning agent behavior for given time period. It is a mapping from perceived states of the environment to actions to be taken when in those states.
+
+Reward function: Reward function is used to define a goal in a reinforcement learning problem.A reward function is a function that provides a numerical score based on the state of the environment
+
+Value function: Value functions specify what is good in the long run. The value of a state is the total amount of reward an agent can expect to accumulate over the future, starting from that state.
+
+Model of the environment: Models are used for planning.
+
+⚫ Credit assignment problem: Reinforcement learning algorithms learn to generate an internal value for the intermediate states as to how good they are in leading to the goal. The learning decision maker is called the agent. The agent interacts with the environment that includes everything outside the agent. 
+
+The agent has sensors to decide on its state in the environment and takes action that modifies its state.
+
+⚫ The reinforcement learning problem model is an agent continuously interacting with an environment. The agent and the environment interact in a sequence of time steps. At each time step t, the agent receives the state of the environment and a scalar numerical reward for the previous action, and then the agent then selects an action.
+
+Reinforcement learning is a technique for solving Markov decision problems.
+
+⚫ Reinforcement learning uses a formal framework defining the interaction between a learning agent and its environment in terms of states, actions, and rewards. This framework is intended to be a simple way of representing essential features of the artificial intelligence problem.
+
+Various Practical Applications of Reinforcement Learning – 
+ 
+
+RL can be used in robotics for industrial automation.
+RL can be used in machine learning and data processing
+RL can be used to create training systems that provide custom instruction and materials according to the requirement of students.
+Application of Reinforcement Learnings 
+
+1. Robotics: Robots with pre-programmed behavior are useful in structured environments, such as the assembly line of an automobile manufacturing plant, where the task is repetitive in nature.
+
+2. A master chess player makes a move. The choice is informed both by planning, anticipating possible replies and counter replies.
+
+3. An adaptive controller adjusts parameters of a petroleum refinery’s operation in real time.
+
+RL can be used in large environments in the following situations: 
+ 
+
+A model of the environment is known, but an analytic solution is not available;
+Only a simulation model of the environment is given (the subject of simulation-based optimization)
+The only way to collect information about the environment is to interact with it.
+ 
+Advantages and Disadvantages of Reinforcement Learning
+ Advantages of Reinforcement learning
+
+1. Reinforcement learning can be used to solve very complex problems that cannot be solved by conventional techniques.
+
+2. The model can correct the errors that occurred during the training process. 
+
+3. In RL, training data is obtained via the direct interaction of the agent with the environment
+
+4. Reinforcement learning can handle environments that are non-deterministic, meaning that the outcomes of actions are not always predictable. This is useful in real-world applications where the environment may change over time or is uncertain.
+
+5. Reinforcement learning can be used to solve a wide range of problems, including those that involve decision making, control, and optimization.
+
+6. Reinforcement learning is a flexible approach that can be combined with other machine learning techniques, such as deep learning, to improve performance.
+
+Disadvantages of Reinforcement learning
+
+1. Reinforcement learning is not preferable to use for solving simple problems.
+
+2. Reinforcement learning needs a lot of data and a lot of computation
+
+3. Reinforcement learning is highly dependent on the quality of the reward function. If the reward function is poorly designed, the agent may not learn the desired behavior.
+
+4. Reinforcement learning can be difficult to debug and interpret. It is not always clear why the agent is behaving in a certain way, which can make it difficult to diagnose and fix problems.
+
+Implementation:
+import gym
+import numpy as np
+ 
+# Define the Q-table and learning rate
+q_table = np.zeros((state_size, action_size))
+alpha = 0.8
+gamma = 0.95
+ 
+# Train the Q-Learning algorithm
+for episode in range(num_episodes):
+    state = env.reset()
+    done = False
+    while not done:
+        # Choose an action
+        action = np.argmax(
+            q_table[state, :] + np.random.randn(1, action_size) * (1. / (episode + 1)))
+ 
+        # Take the action and observe the new state and reward
+        next_state, reward, done, _ = env.step(action)
+ 
+        # Update the Q-table
+        q_table[state, action] = (1 - alpha) * q_table[state, action] + \
+            alpha * (reward + gamma * np.max(q_table[next_state, :]))
+ 
+        state = next_state
+ 
+# Test the trained Q-Learning algorithm
+state = env.reset()
+done = False
+while not done:
+    # Choose an action
+    action = np.argmax(q_table[state, :])
+ 
+    # Take the action
+    state, reward, done, _ = env.step(action)
+    env.render()
+
+Last Updated : 18 Apr, 2023
+
+108
+
+Similar Reads
+1.
+ML | Reinforcement Learning Algorithm : Python Implementation using Q-learning
+2.
+Genetic Algorithm for Reinforcement Learning : Python implementation
+3.
+SARSA Reinforcement Learning
+4.
+Epsilon-Greedy Algorithm in Reinforcement Learning
+5.
+Introduction to Thompson Sampling | Reinforcement Learning
+6.
+Neural Logic Reinforcement Learning - An Introduction
+7.
+Upper Confidence Bound Algorithm in Reinforcement Learning
+8.
+Expected SARSA in Reinforcement Learning
+9.
+Understanding Reinforcement Learning in-depth
+10.
+Sparse Rewards in Reinforcement Learning
